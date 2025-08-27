@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="/sidebar.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <title>Health Dashboard</title>
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="logo.png" alt="LOGO">
+      <div class="logo-text">
+        <h2>Health Mate</h2>
+        <p>Smart Health Assistant</p>
+      </div>
+    </div>
+    <nav>
+      <a href="/landing page/home.html" >
+        <i class="bi bi-house"></i> Home
+      </a>
+      <a href="/health analysis/analysis.html">
+        <i class="bi bi-bar-chart-fill"></i> Health Analysis
+      </a>
+      <a href="#">
+        <i class="bi bi-robot"></i> AI Recommendations
+      </a>
+      <a href="/dashboard/dashboard.html" class="active">
+        <i class="bi bi-person-fill"></i> Profile Dashboard
+      </a>
+      <a href="/consult/consult.html">
+        <i class="bi bi-chat-left-dots-fill"></i> Consult
+      </a>
+      <a href="/about/about.html">
+        <i class="bi bi-info-square-fill"></i> About
+      </a>
+    </nav>
+  </aside>
+  
+  <main>
+    <div class="dashboard">
+      <!-- Welcome Banner -->
+      <div class="welcome-banner">
+        <h1>Welcome back, John Doe! 👋</h1>
+        <p>Here's your personal health dashboard</p>
+      </div>
+
+      <!-- Profile -->
+      <div class="profile">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile">
+        <div class="profile-info">
+          <h2>John Doe</h2>
+          <p>pal@gmail.com</p>
+          <p>+1 (555) 123-4567</p>
+          <p class="member">✔ Member since 2025</p>
+        </div>
+      </div>
+
+      <!-- Health Metrics -->
+      <div class="card">
+        <h3>Health Metrics</h3>
+        <div class="metrics">
+          <div class="metric blue">
+            <p>22.9</p>
+            <p>BMI</p>
+          </div>
+          <div class="metric green">
+            <p>1696</p>
+            <p>BMR <br><small>cal/day</small></p>
+          </div>
+          <div class="metric purple">
+            <p>2628</p>
+            <p>TDEE <br><small>cal/day</small></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Assessment -->
+      <div class="card">
+        <h3>Risk Assessment</h3>
+        <div class="risks">
+          <div class="risk red">
+            <p>Heart Disease</p>
+            <span>LOW RISK</span>
+          </div>
+          <div class="risk light-blue">
+            <p>Diabetes</p>
+            <span>LOW RISK</span>
+          </div>
+          <div class="risk yellow">
+            <p>Obesity</p>
+            <span>LOW RISK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Next Steps -->
+      <div class="card">
+        <h3>Next Steps</h3>
+        <div class="actions">
+          <button class="btn-green">Get AI Recommendations</button>
+          <button class="btn-blue">Download Report</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left Panel */
+.left {
+  flex: 1;
+  background-color: #00a5a5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-box {
+  background: #fff;
+  padding: 50px;   
+  width: 420px; 
+  border-radius: 12px; 
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  animation: slideIn .5s ease-in-out;
+}
+
+.login-box h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #007878;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-box input:focus {
+  border-color: #00a5a5;
+  box-shadow: 0 0 6px rgba(0, 165, 165, 0.4);
+}
+
+.login-btn {
+  background: #00a5a5;
+  color: #fff;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background: #008080;
+}
+
+.create-account {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #007878;
+  text-decoration: none;
+}
+
+.create-account:hover {
+  text-decoration: underline;
+}
+
+/* Right Panel */
+.right {
+  flex: 1;
+  background-color: #e8fafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotateCircle 20s linear infinite;
+}
+
+.circle img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.center-text h2 {
+  color: #007878;
+}
+
+.center-text p {
+  color: #555;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

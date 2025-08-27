@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="consult.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/sidebar.css">
+  <title>Find Your Perfect Doctor</title>
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="logo.png" alt="LOGO">
+      <div class="logo-text">
+        <h2>Health Mate</h2>
+        <p>Smart Health Assistant</p>
+      </div>
+    </div>
+    <nav>
+      <a href="/landing page/home.html">
+        <i class="bi bi-house"></i> Home
+      </a>
+      <a href="/health analysis/analysis.html">
+        <i class="bi bi-bar-chart-fill"></i> Health Analysis
+      </a>
+      <a href="#">
+        <i class="bi bi-robot"></i> AI Recommendations
+      </a>
+      <a href="/dashboard/dashboard.html">
+        <i class="bi bi-person-fill"></i> Profile Dashboard
+      </a>
+      <a href="/consult/consult.html" class="active">
+        <i class="bi bi-chat-left-dots-fill"></i> Consult
+      </a>
+      <a href="/about/about.html">
+        <i class="bi bi-info-square-fill"></i> About
+      </a>
+    </nav>
+  </aside>
+
+  <main>
+    <header class="hero">
+      <h1>Find Your Perfect Doctor</h1>
+      <p>Connect with qualified healthcare professionals in your area</p>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-filter" aria-label="Search doctors">
+      <div class="filter-group">
+        <input type="text" id="searchName" placeholder="Search by doctor name..." aria-label="Doctor name" />
+        <select id="searchSpecialization" aria-label="Specialization">
+          <option value="">Select specialization</option>
+          <option>Cardiology</option>
+          <option>Dermatology</option>
+          <option>Pediatrics</option>
+          <option>Orthopedics</option>
+          <option>Neurology</option>
+        </select>
+        <select id="searchLocation" aria-label="Location">
+          <option value="">Select location</option>
+          <option>New York, NY</option>
+          <option>Los Angeles, CA</option>
+          <option>Chicago, IL</option>
+          <option>Houston, TX</option>
+          <option>Phoenix, AZ</option>
+          <option>Philadelphia, PA</option>
+        </select>
+        <button class="btn search" id="searchBtn">🔍 Search</button>
+        <button class="btn nearest" aria-label="Find nearest doctor">📍 Find Nearest</button>
+      </div>
+    </section>
+
+    <!-- Doctor Cards -->
+    <section class="doctor-list">
+      <h2>Available Doctors</h2>
+      <div class="grid" id="doctorGrid"></div>
+      <p id="noResults" style="text-align:center; color:#888; display:none; margin-top:20px;">
+        ❌ No doctors found. Try different filters.
+      </p>
+    </section>
+
+    <!-- Popup Booking -->
+    <div class="popup-overlay" role="dialog" aria-modal="true">
+      <div class="popup">
+        <h2>Book Appointment</h2>
+        <form id="bookingForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your Name" required />
+
+          <label for="age">Age:</label>
+          <input type="number" id="age" placeholder="Enter your Age" required />
+
+          <label for="date">Select Date:</label>
+          <input type="date" id="date" required />
+
+          <label for="slot">Select Time Slot:</label>
+          <select id="slot" required>
+            <option value="">-- Choose Time Slot --</option>
+            <optgroup label="Morning">
+              <option>08:00 AM - 09:00 AM</option>
+              <option>09:00 AM - 10:00 AM</option>
+              <option>10:00 AM - 11:00 AM</option>
+            </optgroup>
+            <optgroup label="Afternoon">
+              <option>01:00 PM - 02:00 PM</option>
+              <option>02:00 PM - 03:00 PM</option>
+              <option>03:00 PM - 04:00 PM</option>
+            </optgroup>
+            <optgroup label="Evening">
+              <option>05:00 PM - 06:00 PM</option>
+              <option>06:00 PM - 07:00 PM</option>
+              <option>07:00 PM - 08:00 PM</option>
+            </optgroup>
+          </select>
+
+          <label for="symptoms">Health Symptoms:</label>
+          <textarea id="symptoms" placeholder="Describe your health issue..." required></textarea>
+
+          <div class="actions">
+            <button type="submit" class="btn">Confirm</button>
+            <button type="button" class="close-btn">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="consult.js"></script>
+  </main>
+</body>
+
+</html>

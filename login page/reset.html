@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HealthMate - Reset Password</title>
+  <link rel="stylesheet" href="reset.css" />
+</head>
+<body>
+
+  <!-- Left: Reset Password Form -->
+  <section class="left">
+    <div class="login-box" role="region" aria-label="Reset password form">
+      <h1>HEALTHMATE</h1>
+      <p class="subtitle">Create a New Password</p>
+
+      <form id="resetForm" action="#" method="post" novalidate>
+        <input 
+          id="newPassword" 
+          name="newPassword" 
+          type="password" 
+          placeholder="New Password" 
+          required
+        >
+
+        <input 
+          id="confirmPassword" 
+          name="confirmPassword" 
+          type="password" 
+          placeholder="Confirm New Password" 
+          required
+        >
+
+        <button class="login-btn" type="submit" aria-label="Reset password">
+          Reset Password
+        </button>
+      </form>
+
+      <a class="create-account" href="login.html" aria-label="Back to login">
+        Back to Login
+      </a>
+    </div>
+  </section>
+
+  <!-- Right: Info / Decoration -->
+  <section class="right" aria-hidden="true">
+    <div class="center-text">
+      <h2>Password Reset</h2>
+      <p>Enter your new password and confirm it to complete the reset process.</p>
+    </div>
+  </section>
+
+  <script type="module">
+    import { initReset } from './reset.js';
+    initReset();
+  </script>
+
+</body>
+</html>

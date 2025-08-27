@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HealthMate – Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <!-- Left: Login -->
+  <section class="left">
+    <div class="login-box" role="region" aria-label="Login form">
+      <h1>HEALTHMATE</h1>
+      <p class="subtitle">Management Service</p>
+
+      <form id="loginForm" action="#" method="post" novalidate>
+        <label class="sr-only" for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" required>
+
+        <label class="sr-only" for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" required>
+
+        <div class="form-row remember">
+          <label class="checkbox">
+            <input id="remember" name="remember" type="checkbox">
+            <span>Remember me</span>
+          </label>
+          <a class="link" href="./fogort.html" aria-label="Reset your password">Forgot Password?</a>
+        </div>
+
+        <button class="login-btn" type="submit" aria-label="Login to HealthMate">Login</button>
+
+        <!-- Optional: Magic link via email -->
+        <div class="divider" aria-hidden="true">or</div>
+      </form>
+
+      <a class="create-account" href="./register.html" aria-label="Create a new HealthMate account">Create Account</a>
+    </div>
+  </section>
+
+  <!-- Right: Decorative / Brand -->
+  <section class="right" aria-hidden="true">
+    <div class="circle">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966484.png" alt="" style="top:0%;left:50%;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966480.png" alt="" style="top:20%;left:90%;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966506.png" alt="" style="top:50%;left:100%;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966494.png" alt="" style="top:80%;left:90%;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966474.png" alt="" style="top:100%;left:50%;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966482.png" alt="" style="top:80%;left:10%;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966498.png" alt="" style="top:50%;left:0%;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966502.png" alt="" style="top:20%;left:10%;">
+    </div>
+
+    <div class="center-text">
+      <h2>HEALTHMATE</h2>
+      <p>Management Service</p>
+    </div>
+  </section>
+
+  <!-- SR-only utility -->
+  <style>
+    .sr-only {
+      position:absolute!important;
+      width:1px!important; height:1px!important;
+      padding:0!important; margin:-1px!important;
+      overflow:hidden!important; clip:rect(0,0,0,0)!important;
+      white-space:nowrap!important; border:0!important;
+    }
+  </style>
+  <script type="module">
+    import { initLogin } from './login.js'
+    initLogin()
+  </script>
+</body>
+</html>
